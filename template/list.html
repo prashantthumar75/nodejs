@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LIST</title>
+</head>
+<body>
+
+<div class="container" style="color:black" align="center">
+<h1> Your Details </h1>
+    <table border="1">
+    <thead>
+            <tr>
+                <td> ID </td>
+                <td> Username</td>
+                <td> Email </td>
+                <td> Phone NUM </td>
+                <td> PIC LINK </td>
+                <td> Update/Delete</td>
+            </tr>
+    </thead>
+    {% for i in show %}
+        <tr>
+            <td> {{i.id}}</td>
+            <td> {{i.username}}</td>
+            <td> {{i.email}}</td>
+            <td> {{i.num}}</td>
+            <td> {{i.profileImage}}</td>
+            <td><a href="/update/{{i.id}}"> Update</a></td>
+        </tr>
+    {% endfor %}
+<h1>{{user}}</h1>
+        <a href="/logout"> LOGOUT</a>
+
+</table>
+    </div>
+</body>
+</html>
